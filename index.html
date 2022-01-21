@@ -76,7 +76,7 @@
                 </div>
                 <label class="modal-text" for="tel">Телефон</label>
                 <div class="input-wraper">
-                <input class="input-box " type="tel" name="tel" id="tel">
+                <input class="input-box " type="tel" name="tel" id="tel" required>
                 <svg class="modal-icon" width="18px" height="18px">
                   <use href="./images/sprite.svg#icon-phone-modal" ></use>
                 </svg>
@@ -93,13 +93,13 @@
                 <textarea class="modal-textarea" name="comment" id="comment" cols="30" rows="10" placeholder="Введите текст"></textarea>
                 
                 <div class="checkbox-container">
-                  <input type="checkbox" name="agree" value="yes" id="checkbox">
+                  <input class="input-checkbox visually-hidden" type="checkbox" name="agree" value="yes" id="checkbox">
                 <label class="checkbox-text" for="checkbox">
                   <span class="checkbox-wrap">
-                  <svg class="checkbox-icon" width="16px" height="15px">
-                  <use href="./images/sprite.svg#vector-checkbox" ></use>
-                  </svg>
-                  </span>Соглашаюсь с рассылкой и принимаю <a class="checkbox-link" href="">Условия договора</a>
+                    <svg class="checkbox-icon" width="16px" height="15px">
+                      <use href="./images/sprite.svg#vector-checkbox"></use>
+                    </svg>
+                  </span>Соглашаюсь с рассылкой и принимаю <a class="checkbox-link" href="#">Условия договора</a>
                 </label>
                 </div> 
                 <button class="modal-submit-button" type="submit">Отправить</button>

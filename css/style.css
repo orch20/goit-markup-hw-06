@@ -246,7 +246,8 @@ img {
   margin: 0 auto;
   border-radius: 4px;
   padding: 10px 32px;
-  /* padding-bottom: 200px 50px; */
+  width: 200px;
+  height: 50px;
   transition-property: color, background-color, drop-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -576,6 +577,7 @@ img {
   display: flex;
   align-items: center;
 }
+modal-submit-button
 /* --------------------Portfolio------------------------ */
 
 .portfolio-section {
@@ -780,10 +782,6 @@ img {
   transform: translateY(50%);
 }
 
-/* {
-  outline: none;
-  border-color: var(--brand-color);
-} */
 .input-box:focus + .modal-icon {
   fill: var(--brand-color);
 }
@@ -822,6 +820,31 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--second-font-color);
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+.input-checkbox:checked + .checkbox-text .checkbox-wrap {
+  background-color: var(--brand-color);
+  border: none;
+}
+
+.input-checkbox:checked + .checkbox-text .checkbox-icon {
+  fill: var(--white-font-color);
+}
+
+.checkbox-wrap {
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--main-font-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 7px;
+}
+.checkbox-icon {
+  fill: transparent;
 }
 .checkbox-link {
   font-size: 14px;
@@ -832,6 +855,8 @@ img {
 }
 
 .modal-submit-button {
+  width: 200px;
+  height: 50px;
   color: var(--white-font-color);
   background: var(--brand-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -839,4 +864,14 @@ img {
   display: block;
   margin: 0 auto;
   padding: 10px 55px;
+  cursor: pointer;
+  transition-property: color, background-color, drop-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+  
+
+.modal-submit-button:hover,
+.modal-submit-button:focus {
+  background-color: #188ce8;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
