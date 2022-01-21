@@ -55,18 +55,80 @@
       <section class="section section-title">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
+<!-- -----------------Modal--------------------------------------------------- -->
           <button data-modal-open class="hero-button" type="button">Заказать услугу</button>
           <div data-modal class="backdrop is-hidden">
             <div class="modal">
               <button data-modal-close class="modal-button" type="button">
-                <svg width="18px" height="18px">
+                <svg class="modal-svg" width="18px" height="18px">
                   <use href="./images/sprite.svg#icon-close-icon" />
                 </svg>
               </button>
+              <p class="modal-title-text">Оставьте свои данные, мы вам перезвоним</p>
+              <form action="#" class="js-speaker-form">
+                <div class="input-container">
+                <label class="modal-text" for="name">Имя</label>
+                <div class="input-wraper">
+                <input class="input-box" type="text" name="name" id="name">
+                <svg class="modal-icon" width="18px" height="18px">
+                  <use href="./images/sprite.svg#icon-person-modal" ></use>
+                </svg>
+                </div>
+                <label class="modal-text" for="tel">Телефон</label>
+                <div class="input-wraper">
+                <input class="input-box " type="tel" name="tel" id="tel">
+                <svg class="modal-icon" width="18px" height="18px">
+                  <use href="./images/sprite.svg#icon-phone-modal" ></use>
+                </svg>
+                </div>
+                <label class="modal-text" for="mail">Почта</label>
+                <div class="input-wraper">
+                <input class="input-box" type="email" name="mail" id="mail">
+                <svg class="modal-icon" width="18px" height="18px">
+                  <use href="./images/sprite.svg#icon-email-modal" ></use>
+                </svg>
+                </div>
+                </div>
+                <label class="modal-text" for="comment">Комментарий</label>
+                <textarea class="modal-textarea" name="comment" id="comment" cols="30" rows="10" placeholder="Введите текст"></textarea>
+                
+                <div class="checkbox-container">
+                  <input type="checkbox" name="agree" value="yes" id="checkbox">
+                <label class="checkbox-text" for="checkbox">
+                  <span class="checkbox-wrap">
+                  <svg class="checkbox-icon" width="16px" height="15px">
+                  <use href="./images/sprite.svg#vector-checkbox" ></use>
+                  </svg>
+                  </span>Соглашаюсь с рассылкой и принимаю <a class="checkbox-link" href="">Условия договора</a>
+                </label>
+                </div> 
+                <button class="modal-submit-button" type="submit">Отправить</button>
+
+                
+
+
+
+              </form>
             </div>
           </div>
         </div>
       </section>
+
+
+
+<script>
+(() => {
+  document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+    e.preventDefault();
+
+    new FormData(e.currentTarget).forEach((value, name) =>
+      console.log(`${name}: ${value}`),
+    );
+  });
+})();
+</script>
+
+
 
       <section class="about-section">
         <div class="container">
@@ -431,6 +493,13 @@
                 </a>
               </li>
             </ul>
+          </div>
+          <div class="footer-input-container">
+            <h3 class="footer-title title-h3">Подпишитесь на рассылку</h3>
+            <input class="footer-input" type="email" name="mail" id="" placeholder="E-mail">
+          </div>
+          <div class="footer-button-container">
+          <button class="footer-button">Подписаться<svg width="24px" height="24px"><use href="./images/sprite.svg#icon-send-footer" ></use></svg> </button>
           </div>
         </div>
       </footer>
